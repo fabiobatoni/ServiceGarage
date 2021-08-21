@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0918F1F-55BB-4ABC-A106-E0CE6EDA8249}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OficinaGarage</RootNamespace>
+    <AssemblyName>OficinaGarage</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LOGO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\Funcionario.cs" />
+    <Compile Include="Classes\ItensOrcamento.cs" />
+    <Compile Include="Classes\Orcamento.cs" />
+    <Compile Include="Classes\Produto.cs" />
+    <Compile Include="Classes\Usuario.cs" />
+    <Compile Include="Conexoes\Conexao.cs" />
+    <Compile Include="Conexoes\Criptografia.cs" />
+    <Compile Include="Classes\Formularios.cs" />
+    <Compile Include="Formularios\frmAdicionarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAdicionarProdutos.Designer.cs">
+      <DependentUpon>frmAdicionarProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCadUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCadUsuario.Designer.cs">
+      <DependentUpon>frmCadUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaEstoque.Designer.cs">
+      <DependentUpon>frmConsultaEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmContato.Designer.cs">
+      <DependentUpon>frmContato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmOrcamento.Designer.cs">
+      <DependentUpon>frmOrcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisarCliente.Designer.cs">
+      <DependentUpon>frmPesquisarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisarOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisarOS.Designer.cs">
+      <DependentUpon>frmPesquisarOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisarProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisarProd.Designer.cs">
+      <DependentUpon>frmPesquisarProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmProduto.Designer.cs">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCadastrarFuncionário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCadastrarFuncionário.Designer.cs">
+      <DependentUpon>frmCadastrarFuncionário.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRestory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRestory.Designer.cs">
+      <DependentUpon>frmRestory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexoes\Program.cs" />
+    <Compile Include="Formularios\frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmAdicionarProdutos.resx">
+      <DependentUpon>frmAdicionarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCadUsuario.resx">
+      <DependentUpon>frmCadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConsultaEstoque.resx">
+      <DependentUpon>frmConsultaEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmContato.resx">
+      <DependentUpon>frmContato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmOrcamento.resx">
+      <DependentUpon>frmOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPesquisarCliente.resx">
+      <DependentUpon>frmPesquisarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPesquisarOS.resx">
+      <DependentUpon>frmPesquisarOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPesquisarProd.resx">
+      <DependentUpon>frmPesquisarProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmProduto.resx">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCadastrarFuncionário.resx">
+      <DependentUpon>frmCadastrarFuncionário.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRestory.resx">
+      <DependentUpon>frmRestory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orcamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaOrc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaEstoque.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustarSaldo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backupIco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restoryIco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-service-logo-vector-22695065.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serviceCar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carService.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustarSaldo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaEst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarioCad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restoryIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultaOrc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produto12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustarSaldo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup1editada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sobre.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contato.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wpp.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LOGO.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
