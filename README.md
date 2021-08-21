@@ -3,17 +3,18 @@ Service Garage
 Projeto Criado para administração de oficinas com intuito de minimizar operações manuais
 
 # Utilização das linguagens:
-C#
-PHP
+C#,
+PHP,
 Javascript (Ajax)
 
 # Bibliotecas
-Bootstrap
+Bootstrap, 
 ChartJs
 
 # Telas Desktop:
 
 Login:
+
 ![login](https://user-images.githubusercontent.com/57717982/130329665-1c3ad85c-a681-45ab-be84-a5764e0aad0b.PNG)
 
 Cadastros:
